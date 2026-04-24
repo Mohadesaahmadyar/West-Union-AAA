@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,13 +8,13 @@
     color: #243e63;
 }
 
-body{
+body {
 
     max-width: 100vw;
     overflow-x: hidden;
 }
 
-.row{
+.row {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -22,13 +22,14 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+
 .row__narrow {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
 }
 
-.container{
+.container {
     padding: 96px 0;
 }
 
@@ -49,42 +50,44 @@ a {
 /* LANDING */
 
 
-nav{
+nav {
     display: flex;
     padding-top: 32px;
 }
 
-.nav__row{
+.nav__row {
     display: flex;
     justify-content: space-between;
 
 }
-.nav__logo{
+
+.nav__logo {
     display: flex;
     align-items: center;
     margin: 8px 0;
     padding-bottom: 4px;
 }
 
-.nav__logo--img{
+.nav__logo--img {
     width: 38px;
     height: 38px;
 }
 
-.nav__logo--text{
+.nav__logo--text {
     font-size: 18px;
     font-weight: 600;
     margin-left: 8px;
     color: rgb(5, 5, 5);
 
 }
-.nav__links{
+
+.nav__links {
     display: flex;
     justify-content: space-between;
     list-style: none;
 }
 
-.nav__link{
+.nav__link {
     color: rgb(25, 24, 24);
     font-size: 18px;
     font-weight: 600;
@@ -170,7 +173,95 @@ nav{
 
 /* 
 
-HEADER / ABOUT US ↓
+about / Memberships ↓
 
 */
+
+#memberships {
+    background-image: linear-gradient(rgba(59, 130, 246, 0.4), rgba(59, 130, 246, 0.4)), url(./assets/towtruck-snowyhighway.png);
+
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("./assets/your-image.jpg"); */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+ /* overlay that will blur
+#memberships::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    transition: backdrop-filter 300ms ease;
+}
+
+/* blur only on hover 
+#memberships:hover::before {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+} */
+
+#memberships .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 64px;
+}
+
+.memerbships__title {
+    width: 40%;
+    color: ghostwhite;
+    font-weight: 700;
+    font-size: 48px;
+
+}
+
+.membership__para--wrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.membership__para {
+    font-size: 20px;
+    color: rgb(230, 237, 237);
+    margin-bottom: 16px;
+}
+
+.glass {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.member__btn {
+    width: 160px;
+    padding: 14px 0;
+    background: #dcdce7;
+    color: #020202;
+    border-radius: 500px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 300ms ease, transform 300ms ease;
+
+}
+
+
+.member__btn:hover {
+    cursor: pointer;
+    background-color: #1355e4;
+    color: white; }
+
+.member__btn:active {
+    transform: scale(0.98);
+}
 
