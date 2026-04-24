@@ -22,9 +22,17 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+.row__narrow {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 .container{
     padding: 96px 0;
 }
+
+
 section {
     padding: 0 32px;
 }
@@ -39,12 +47,14 @@ a {
 
 
 /* LANDING */
+
+
 nav{
     display: flex;
     padding-top: 32px;
 }
 
-.nav-row{
+.nav__row{
     display: flex;
     justify-content: space-between;
 
@@ -56,11 +66,111 @@ nav{
     padding-bottom: 4px;
 }
 
+.nav__logo--img{
+    width: 38px;
+    height: 38px;
+}
+
 .nav__logo--text{
     font-size: 18px;
+    font-weight: 600;
+    margin-left: 8px;
+    color: rgb(5, 5, 5);
 
 }
 .nav__links{
-    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav__link{
+    color: rgb(25, 24, 24);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 16px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
 
 }
+
+.nav__link--primary {
+    background: #1521ff;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 9999px;
+}
+
+.btn__menu {
+    display: none;
+    background: transparent;
+    border: none;
+    transition: all 300ms ease;
+}
+
+.btn__menu--svg:hover {
+    filter: invert(26%) sepia(94%) saturate(7476%) hue-rotate(261deg) brightness(94%) contrast(115%);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 378px;
+    margin: 24px 16px;
+    padding: 32px;
+    background-color: #fff;
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 8px;
+    z-index: 4;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(300%);
+    transition: all 300ms ease;
+}
+
+.modal__links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__link {
+    color: #1a202c;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 8px 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.modal__link--primary {
+    color: #f7fafc;
+    padding: 12px 32px;
+    background: #1a3cfd;
+    border-radius: 500px;
+    border: none;
+}
+
+.menu--open .modal {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.btn__menu--close {
+    position: fixed;
+    top: 24px;
+    right: 18px;
+}
+
+/* 
+
+HEADER / ABOUT US ↓
+
+*/
+

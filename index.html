@@ -4,40 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>West Union AAA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <section id="landing">
         <nav>
-            <div class="nav-row">
+            <div class="row nav__row">
                 <div class="nav__logo">
-                    <img src="./assets/westunion logo.jpeg" alt="">
+                    <img src="./assets/westunion logo.jpeg" alt="West Union AAA logo" class="nav__logo--img">
                     <div class="nav__logo--text">West Union AAA</div>
                 </div>
 
                 <ul class="nav__links">
-                    <li> About </li>
-                    <li>Memberships</li>
-                    <li>Services</li>
-                    <li>Pricing</li>
-                    <li>Contact</li>
+                    <li><a href="#" class="nav__link"> About </a></li>
+                    <li><a href="#" class="nav__link">Memberships</a></li>
+                    <li><a href="#" class="nav__link">Services</a></li>
+                    <li><a href="#" class="nav__link">Pricing</a></li>
+                    <li><a href="#" class="nav__link">Contact</a></li>
+                    <li><a href="#" class="nav__link nav__link--primary">Sign Up</a></li>
                 </ul>
 
-                <button></button>
-            </div>
-        </nav>
+                <button class="btn__menu" onclick="openMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="btn__menu--svg">
+                      <line x1="3" y1="12" x2="21" y2="12"></line>
+                      <line x1="3" y1="6" x2="21" y2="6"></line>
+                      <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                  </button>
+                </div>
+              </nav>
+              <div class="modal">
+                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="light___StyledCloseIcon-lj69nl-14 fASujC">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+                <div class="modal__links">
+                  <a class="modal__link">About</a>
+                  <a class="modal__link">Blog</a>
+                  <a class="modal__link">Pricing</a>
+                  <a class="modal__link">Contact Us</a>
+                  <a class="modal__link">Login</a>
+                  <a class="modal__link modal__link--primary">Sign Up</a>
+                </div>
+                </div>
     </section>
 
     <section id="memerbships">
-    <div class="container">
-        <div class="row">
-            <h1 class="memerbships__title"> west Union AAA Membership</h1>
-            <p class="membership__para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, architecto facilis labore quae optio ipsum error enim repellat tenetur maiores nostrum id. Neque enim aliquid consequatur dolores excepturi itaque in?
-            </p>
-            <button class="member__btn">Join Us</button>
+        <div class="container">
+            <div class="row">
+                <h1 class="memerbships__title"> west Union AAA Membership</h1>
+                <p class="membership__para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, architecto
+                    facilis labore quae optio ipsum error enim repellat tenetur maiores nostrum id. Neque enim aliquid
+                    consequatur dolores excepturi itaque in?
+                </p>
+                <button class="member__btn">Join Us</button>
+            </div>
         </div>
-    </div>    
     </section>
 
 
