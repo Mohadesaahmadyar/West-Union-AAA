@@ -265,3 +265,42 @@ about / Memberships ↓
     transform: scale(0.98);
 }
 
+
+
+/* 
+Services
+*/
+
+#services{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.services__title{
+    font-size: 24px;
+    color: #020202;
+    align-items: center;
+}
+
+.services__subtitle{
+    font-size: 18px;
+    color: #1a202c;
+    align-items: center;
+}
+
+.services__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.service{
+    font-weight: 400;
+    font-size: 24px;
+}
+.service__para{
+    font-size: 18px;
+    color: #1a202c;
+}
