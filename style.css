@@ -188,87 +188,76 @@ about / Memberships ↓
     background-repeat: no-repeat;
     min-height: 500px;
 }
- /* overlay that will blur
-#memberships::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    transition: backdrop-filter 300ms ease;
-}
 
-/* blur only on hover 
-#memberships:hover::before {
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-} */
+/* 
+Memberships
+*/
 
-#memberships .row {
+
+.memberships__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 64px;
+    gap: 48px;
 }
 
-.memerbships__title {
-    width: 40%;
-    color: ghostwhite;
-    font-weight: 700;
+
+.memberships__left {
+    width: 50%;
+}
+
+.memberships__title {
     font-size: 48px;
-
+    font-weight: 700;
+    color: white;
 }
 
-.membership__para--wrapper {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 
+.memberships__right {
+    width: 50%;
+    padding: 32px;
+    border-radius: 16px;
 }
+
+
+/* .glass {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+} */
+
 
 .membership__para {
-    font-size: 20px;
-    color: rgb(230, 237, 237);
-    margin-bottom: 16px;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 24px;
+    line-height: 1.6;
 }
 
-.glass {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
-    padding: 24px;
+.membership__buttons {
+    display: flex;
+    gap: 16px;
 }
 
 .member__btn {
-    width: 160px;
-    padding: 14px 0;
-    background: #dcdce7;
-    color: #020202;
-    border-radius: 500px;
+    padding: 12px 20px;
+    border-radius: 999px;
     border: none;
-    font-size: 16px;
     font-weight: 600;
-    transition: background-color 300ms ease, transform 300ms ease;
-
-}
-
-
-.member__btn:hover {
+    background: white;
     cursor: pointer;
-    background-color: #1355e4;
-    color: white; }
-
-.member__btn:active {
-    transform: scale(0.98);
 }
 
+.member__btn--secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white; }
 
 
 /* 
+
 Services
+
 */
 
 #services{
