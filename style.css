@@ -314,3 +314,40 @@ Services
     margin-top: 12px;
 
 }
+
+/* 
+
+About
+
+*/
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about__title {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+.about__para {
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.about__features {
+    list-style: none;
+    padding: 0;
+}
+
+.about__features li {
+    margin-bottom: 10px; }
+        .check {
+            color: #6415ff;
+            margin-right: 8px;     }
+            
