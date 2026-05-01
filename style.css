@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-    padding: 96px 0;
+    padding: 8px 0;
 }
 
 
@@ -173,7 +173,7 @@ nav {
 
 /* 
 
-about / Memberships ↓
+ Memberships ↓
 
 */
 
@@ -189,10 +189,10 @@ about / Memberships ↓
     min-height: 500px;
 }
 
-/* 
-Memberships
-*/
+.container__member{
 
+    padding: 96px 0;
+}
 
 .memberships__row {
     display: flex;
@@ -251,7 +251,8 @@ Memberships
 .member__btn--secondary {
     background: transparent;
     border: 2px solid white;
-    color: white; }
+    color: white;
+}
 
 
 /* 
@@ -260,40 +261,40 @@ Services
 
 */
 
-#services{
+#services {
 
     padding: 96px 32px;
 }
 
-.services__header{
+.services__header {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-bottom: 48px;
 }
 
-.services__title{
+.services__title {
     font-size: 42px;
     font-weight: 700;
     color: #020202;
     /* align-items: center; */
     margin-bottom: 12px;
-   
+
 }
 
-.services__subtitle{
+.services__subtitle {
     font-size: 24px;
     color: #1a202c;
 }
 
-.services__list{
+.services__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
 }
 
-.service{
+.service {
     font-weight: 300;
     width: 280px;
     padding: 24px;
@@ -308,7 +309,7 @@ Services
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.service__para{
+.service__para {
     font-size: 18px;
     color: #1a202c;
     margin-top: 12px;
@@ -321,23 +322,32 @@ About
 
 */
 
+.about__row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 64px;
+}
+
 .about__content {
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: start;
+
 }
 
 .about__title {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+    margin-bottom: 12px;
+    font-size: 24px;
+    
 }
 
-
 .about__para {
-    max-width: 600px;
+    max-width: 500px;
     margin-bottom: 20px;
+    margin-top: 12px;
 }
 
 .about__features {
@@ -346,8 +356,36 @@ About
 }
 
 .about__features li {
-    margin-bottom: 10px; }
-        .check {
-            color: #6415ff;
-            margin-right: 8px;     }
-            
+    margin-bottom: 10px;
+}
+
+.check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    background-color: #1515ff;
+    color: white;
+    
+    border-radius: 50%;
+
+    font-size: 14px;
+    /* font-weight: bold; */
+
+    margin-right: 10px;
+
+}
+
+.about__img {
+    width: 40%;
+}
+
+.about__img--wrapper {
+    width: 100%;
+    display: block;
+    border-radius: 12px;    
+}
+
