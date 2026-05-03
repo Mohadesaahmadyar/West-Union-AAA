@@ -10,3 +10,16 @@ giftBtn.addEventListener("click", function () {
   alert("Gift membership feature coming soon!");
 });
 
+
+
+
+import { createIcons, phoneCall } from 'lucide';
+
+createIcons({
+  icons: {
+    phoneCall
+  }
+});
+
+
+<i data-lucide="phone-call"></i>  

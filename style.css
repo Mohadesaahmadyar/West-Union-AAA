@@ -449,16 +449,17 @@ Pricing
 
 .package__stripe {
     height: 8px;
-        width: 100%;
+    width: 100%;
 }
 
-.basic__stripe{
+.basic__stripe {
     background: linear-gradient(115deg, rgb(70, 142, 193) 0%, rgb(129, 198, 230) 100%);
 }
 
-.premium__stripe{
+.premium__stripe {
     background: linear-gradient(115deg, rgb(193, 80, 70) 0%, rgb(230, 161, 129) 100%);
 }
+
 .package__header {
     display: flex;
     flex-direction: column;
@@ -484,7 +485,7 @@ Pricing
     margin: 0;
 }
 
-.package__duration{
+.package__duration {
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -506,16 +507,16 @@ Pricing
     margin-top: 18px;
 }
 
-.package__feature-basic{
+.package__feature-basic {
     list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 34px;
-        color: #718096;
-        font-size: 18px;
-        margin-bottom: 18px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    color: #718096;
+    font-size: 18px;
+    margin-bottom: 18px;
 }
 
 .package__feature {
@@ -544,27 +545,27 @@ Pricing
 
 .package__btn {
     min-width: 180px;
-        padding: 14px 32px;
-        border-radius: 999px;
-        border: none;
-        font-size: 16px;
-        font-weight: 700;
-        cursor: pointer;
+    padding: 14px 32px;
+    border-radius: 999px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
 
-        color: white;
-        background: linear-gradient(115deg, rgb(193, 80, 70) 0%, rgb(230, 161, 129) 100%);
+    color: white;
+    background: linear-gradient(115deg, rgb(193, 80, 70) 0%, rgb(230, 161, 129) 100%);
 }
 
-.package__btn--basic{
+.package__btn--basic {
     min-width: 180px;
-        padding: 14px 32px;
-        border-radius: 999px;
-        border: none;
-        font-size: 16px;
-        font-weight: 700;
-        cursor: pointer;
-color: white;
-background: linear-gradient(115deg, rgb(70, 142, 193) 0%, rgb(129, 198, 230) 100%);
+    padding: 14px 32px;
+    border-radius: 999px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(115deg, rgb(70, 142, 193) 0%, rgb(129, 198, 230) 100%);
 }
 
 /* 
@@ -572,7 +573,7 @@ background: linear-gradient(115deg, rgb(70, 142, 193) 0%, rgb(129, 198, 230) 100
 Gifts
 
 */
-#gifts .row{
+#gifts .row {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -580,12 +581,12 @@ Gifts
     padding: 60px 20px;
 }
 
-.gist__title{
+.gist__title {
     margin-top: 34px;
     margin-left: 18px;
 }
 
-.gift_membership{
+.gift_membership {
     margin-left: 18px;
     font-size: 20px;
 }
@@ -601,9 +602,10 @@ Gifts
     margin-left: 18px;
     transition: all 0.3s ease;
 }
+
 .gift__btn:hover {
     transform: translateY(-2px);
-    filter: brightness(1.1); 
+    filter: brightness(1.1);
 
 }
 
@@ -613,5 +615,81 @@ Gifts
 
     background: linear-gradient(115deg, rgb(70, 142, 193), rgb(129, 198, 230));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* 
+Contact US
+*/
+
+#contact {
+    background-color: rgb(70, 142, 193);
+    padding: 48px 0;
+}
+
+#contact,
+#contact * {
+    color: white !important;
+}
+
+#contact .row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contact__header {
+    text-align: center;
+}
+
+.contactUs {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 24px;
+}
+
+.contact__para {
+    font-size: 18px;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 24px auto 0;
+}
+
+.contact__options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+
+}
+
+
+.call,
+.email {
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+
+.contact__email,
+.contact__phone-number {
+    text-decoration: underline;
+    transition: all 300 ease;
+    cursor: pointer;
 }
