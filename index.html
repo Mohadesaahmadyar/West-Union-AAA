@@ -1,308 +1,434 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>West Union AAA</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>West Union AAA</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+  <body>
+    <!-- =========================
+         LANDING SECTION
+========================= -->
+    <section id="landing">
+      <nav>
+        <div class="row nav__row">
+          <div class="nav__logo">
+            <img
+              src="./assets/westunion logo.jpeg"
+              alt="West Union AAA logo"
+              class="nav__logo--img"
+            />
+            <div class="nav__logo--text">West Union AAA</div>
+          </div>
 
-<body>
-  <section id="landing">
-    <nav>
-      <div class="row nav__row">
-        <div class="nav__logo">
-          <img src="./assets/westunion logo.jpeg" alt="West Union AAA logo" class="nav__logo--img">
-          <div class="nav__logo--text">West Union AAA</div>
+          <ul class="nav__links">
+            <li>
+              <a href="#Pricing" class="nav__link"> Membership</a>
+            </li>
+
+            <li>
+              <a href="#services" class="nav__link"> Services </a>
+            </li>
+
+            <li>
+              <a href="#about" class="nav__link"> About </a>
+            </li>
+
+            <li>
+              <a href="#contact" class="nav__link"> Contact </a>
+            </li>
+
+            <li>
+              <a href="#" class="nav__link nav__link--primary">
+                Sign Up
+              </a>
+            </li>
+          </ul>
+
+          <button class="btn__menu" onclick="openMenu()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="btn__menu--svg"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
         </div>
-
-        <ul class="nav__links">
-          <li><a href="#" class="nav__link"> About </a></li>
-          <li><a href="#" class="nav__link">Memberships</a></li>
-          <li><a href="#" class="nav__link">Services</a></li>
-          <li><a href="#" class="nav__link">Pricing</a></li>
-          <li><a href="#" class="nav__link">Contact</a></li>
-          <li><a href="#" class="nav__link nav__link--primary">Sign Up</a></li>
-        </ul>
-
-        <button class="btn__menu" onclick="openMenu()">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="btn__menu--svg">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
+      </nav>
+      <div class="modal">
+        <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
-      </div>
-    </nav>
-    <div class="modal">
-      <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="light___StyledCloseIcon-lj69nl-14 fASujC">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-      <div class="modal__links">
-        <a class="modal__link">About</a>
-        <a class="modal__link">Memberships</a>
-        <a class="modal__link">Services</a>
-        <a class="modal__link">Pricing</a>
-        <a class="modal__link">Contact</a>
-        <a class="modal__link modal__link--primary">Sign Up</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="memberships">
-    <div class="container__member">
-      <div class="row memberships__row">
-  
-        <div class="memberships__left">
-          <h1 class="memberships__title">
-            West Union AAA Membership
-          </h1>
+      
+        <div class="modal__links">
+          <a href="#Pricing" class="modal__link" onclick="closeMenu()">Membership</a>
+          <a href="#services" class="modal__link" onclick="closeMenu()">Services</a>
+          <a href="#about" class="modal__link" onclick="closeMenu()">About</a>
+          <a href="#gifts" class="modal__link" onclick="closeMenu()">Gift</a>
+          <a href="#contact" class="modal__link" onclick="closeMenu()">Contact</a>
+          <a href="#Pricing" class="modal__link modal__link--primary" onclick="closeMenu()">Sign Up</a>
         </div>
-  
-        <div class="memberships__right glass">
-          <p class="membership__para">
-            We offer 24/7 roadside assistance including towing, tire replacement,
-            fuel delivery, jump starts, and lockout services — all available to members.
-          </p>
-  
-          <div class="membership__buttons">
-            <button class="member__btn" id="joinBtn">Join Us</button>
-            <button class="member__btn member__btn--secondary">Log In</button>
+      </div>
+    </section>
+
+    <!-- =========================
+         memberships SECTION
+========================= -->
+    <section id="memberships">
+      <div class="container__member">
+        <div class="row memberships__row">
+          <div class="memberships__left">
+            <h1 class="memberships__title">West Union AAA Membership</h1>
+          </div>
+
+          <div class="memberships__right glass">
+            <p class="membership__para">
+              We offer 24/7 roadside assistance including towing, tire
+              replacement, fuel delivery, jump starts, and lockout services —
+              all available to members.
+            </p>
+
+            <div class="membership__buttons">
+              <button class="member__btn" id="joinBtn">Join Us</button>
+              <button class="member__btn member__btn--secondary">Log In</button>
+            </div>
           </div>
         </div>
-  
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="Pricing">
-    <div class="container">
-      <div class="row row__pricing">
-  
-        <div class="packages_contant">
-  
-          <h2 class="pricing__title">
-            Simple, Transparent Membership Plans
+    <!-- =========================
+         LUNCH OFFER SECTION
+========================= -->
+    <section id="launch-offer">
+      <div class="container">
+        <div class="launch__offer--wrapper">
+          <div class="launch__offer--left">
+            <p class="launch__tag">GET 30% OFF ON ALL MEMBERSHIPS!</p>
+
+            <h2 class="launch__title">Join Now and Save!</h2>
+          </div>
+
+          <div class="launch__offer--right">
+            <p class="launch__para" id="countdownText">
+              First 499 members get their first year for only
+              <span class="launch__highlight">$49.99</span>
+            </p>
+
+            <button class="launch__btn">Claim Offer</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         PRICING SECTION
+========================= -->
+
+    <section id="Pricing">
+      <div class="container">
+        <div class="row row__pricing">
+          <div class="packages_contant">
+            <h2 class="pricing__title">Simple Membership Plan</h2>
+
+            <p class="pricing__para">
+              Reliable roadside assistance whenever you need it.
+            </p>
+          </div>
+
+          <div class="billing-toggle">
+            <span>Monthly</span>
+
+            <label class="switch">
+              <input type="checkbox" id="billingToggle" />
+              <span class="slider"></span>
+            </label>
+
+            <span>Yearly</span>
+          </div>
+
+          <div class="packages__container">
+            <div class="package">
+              <div class="package__stripe"></div>
+
+              <div class="package__header">
+                <h3 class="package__name">West Union Membership</h3>
+
+                <div class="package__price" id="price">$7.99</div>
+
+                <div class="package__duration" id="duration">Monthly</div>
+              </div>
+
+              <div class="pricing__package--feature">
+                <p class="package__discription">
+                  One membership to keep you protected on the road.
+                </p>
+
+                <ul class="package__feature">
+                  <li>🚛 4 Towing assistance</li>
+                  <li>🔋 Battery jumpstart</li>
+                  <li>🔑 Lockout service</li>
+                  <li>⛽ Fuel delivery</li>
+                  <li>🛞 Flat tire assistance</li>
+                  <li>📞 24/7 roadside support</li>
+                </ul>
+              </div>
+
+              <div class="package__bottom">
+                <button class="package__btn--basic">JOIN TODAY</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         SERVICES SECTION
+========================= -->
+    <section id="services">
+      <div class="container">
+        <div class="row services__header">
+          <h1 class="services__title">Our Services</h1>
+          <p class="services__subtitle">
+            Available exclusively for our members
+          </p>
+        </div>
+
+        <div class="services__list">
+          <div class="service">
+            <h2 class="service__title">Towing</h2>
+
+            <p class="service__para">
+              Up to 4 towing services per membership year:
+            </p>
+
+            <ul class="service__list">
+              <li>1st tow: up to 20 miles</li>
+              <li>2nd tow: up to 15 miles</li>
+              <li>3rd tow: up to 10 miles</li>
+              <li>4th tow: up to 5 miles</li>
+            </ul>
+          </div>
+
+          <div class="service">
+            <h2 class="service__title">Tire Change</h2>
+            <p class="service__para">
+              Flat tire? We’ll help replace it safely on the spot.
+            </p>
+          </div>
+
+          <div class="service">
+            <h2 class="service__title">Fuel Delivery</h2>
+            <p class="service__para">
+              Out of gas? We bring fuel to you. Fuel cost is separate.
+            </p>
+          </div>
+
+          <div class="service">
+            <h2 class="service__title">Jump Start</h2>
+            <p class="service__para">
+              Dead battery? We’ll help get your vehicle moving again.
+            </p>
+          </div>
+
+          <div class="service">
+            <h2 class="service__title">Lockout</h2>
+            <p class="service__para">
+              Locked out? We help you get back into your vehicle safely.
+            </p>
+          </div>
+
+          <div class="service">
+            <h2 class="service__title">Coverage Rules</h2>
+            <p class="service__para">
+              To ensure we can provide the best service, please note:
+            </p>
+
+            <ul class="service__list">
+              <li>Members must live in the Portland Metro zone</li>
+              <li>Coverage is valid up to 50 miles from member residence</li>
+              <li>Extra miles are $6–$7 per mile</li>
+              <li>Vehicles must be newer than 1990</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         ABOUT SECTION
+========================= -->
+    <section id="about">
+      <div class="container">
+        <div class="row about__row">
+          <div class="about__content">
+            <h2 class="about__title">Why Choose West Union AAA Trucking?</h2>
+
+            <p class="about__para">
+              As a family-owned, two-truck operation, we offer something the big
+              carriers can't: personal attention to every single service. When
+              you call, you talk directly to the owners who care about your tow.
+            </p>
+
+            <ul class="about__features">
+              <li>
+                <span class="check">✓</span>Direct communication with
+                owner-operators, no call centers
+              </li>
+              <li>
+                <span class="check">✓</span>Your tow is our priority —
+                personalized service every time
+              </li>
+              <li>
+                <span class="check">✓</span>Flexible scheduling and routes
+                tailored to your needs
+              </li>
+              <li>
+                <span class="check">✓</span>Competitive rates with transparent,
+                honest pricing
+              </li>
+            </ul>
+          </div>
+
+          <div class="about__img">
+            <img
+              class="about__img--wrapper"
+              src="./assets/towing in rain.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         GIFT MEMBERSHIP SECTION
+========================= -->
+
+    <section id="gifts">
+      <dic class="container">
+        <div class="row">
+          <h2 class="gist__title">
+            <i class="fa-solid fa-gift"></i>
+            Gift a Membership
           </h2>
-  
-          <p class="pricing__para">
-            Choose a plan that fits your needs and drive with confidence.
+          <p class="gift_membership">
+            Give someone peace of mind on the road. With a gifted membership,
+            your friends or family can stay protected with reliable roadside
+            assistance whenever they need it.
           </p>
+
+          <button class="gift__btn">Send a Gift</button>
         </div>
-  
-        <!-- Toggle -->
-        <div class="billing-toggle">
-          <span>Pay Monthly</span>
-  
-          <label class="switch">
-            <input type="checkbox" id="billingToggle" checked>
-            <span class="slider"></span>
-          </label>
-  
-          <span>Pay Yearly</span>
-        </div>
-  
-        <!-- Card -->
-        <div class="packages__container">
-          <div class="package">
-  
-            <div class="package__stripe basic__stripe"></div>
-  
-            <div class="package__header">
-              <h3 class="pakage__name">West Union Membership</h3>
-  
-              <div class="package__price" id="price">$79.99</div>
-              <div class="package__duration" id="duration">Yearly</div>
-  
-              <p class="package__offer" id="offer">
-                Launch Offer: $49.99 first year
-              </p>
+      </dic>
+    </section>
+
+    <!-- =========================
+         CONTACT SECTION
+========================= -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact__header">
+            <h2 class="contactUs">Contact Us</h2>
+            <p class="contact__para">
+              Talk directly with the owners. No automated systems, just real
+              people who care.
+            </p>
+          </div>
+
+          <div class="contact__options">
+            <div class="call">
+              <div class="contact__item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-phone w-12 h-12 mx-auto mb-4"
+                  data-fg-d3bl122="0.8:17.1221:/src/app/App.tsx:204:15:9660:44:e:Phone::::::DmpI"
+                  data-fgid-d3bl122=":r2v:"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+
+                <h3 class="contact__phone">Call Us</h3>
+              </div>
+              <p class="contact__phone-number">(971) 415-8264</p>
             </div>
-  
-            <div class="pricing__package--feature">
-              <p class="package__discription">
-                One simple membership to keep you covered on the road.
-              </p>
-  
-              <ul class="package__feature">
-                <li>✔️ 4 roadside services per year</li>
-                <li>🚗 1st tow up to 20 miles</li>
-                <li>🚗 2nd tow up to 15 miles</li>
-                <li>🚗 3rd tow up to 10 miles</li>
-                <li>🚗 4th tow up to 5 miles</li>
-                <li>🔋 Jumpstart</li>
-                <li>🔑 Lockout</li>
-                <li>⛽ Fuel delivery (fuel cost separate)</li>
-                <li>🛞 Tire change</li>
-              </ul>
+
+            <div class="email">
+              <div class="contact__item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail w-12 h-12 mx-auto mb-4"
+                  data-fg-d3bl130="0.8:17.1221:/src/app/App.tsx:210:15:9973:43:e:Mail::::::D4VR"
+                  data-fgid-d3bl130=":r34:"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <h3 class="contact__email--title">Email US</h3>
+              </div>
+              <p class="contact__email">info@westunion.com</p>
             </div>
-  
-            <div class="package__bottom">
-              <button class="package__btn--basic">JOIN TODAY</button>
-            </div>
-  
           </div>
         </div>
-  
       </div>
-    </div>
-  </section>
- 
+    </section>
 
-  <section id="services">
-    <div class="container">
-      <div class="row services__header">
-        <h1 class="services__title">Our Services</h1>
-        <p class="services__subtitle">
-          Available exclusively for our members
-        </p>
-      </div>
-
-      <div class="services__list">
-        <div class="service">
-          <h2 class="service__title">Towing</h2>
-          <p class="service__para">Fast and reliable vehicle towing anytime.</p>
+    <footer>
+      <div class="row footer__row">
+        <div class="footer__logo">
+          <img
+            src="./assets/westunion logo.jpeg"
+            alt="West Union AAA logo"
+            class="footer__logo--img"
+          />
+          <div class="footer__logo--text">West Union AAA</div>
         </div>
-
-        <div class="service">
-          <h2 class="service__title">Tire Replacement</h2>
-          <p class="service__para">Flat tire? We’ll replace it on the spot.</p>
-        </div>
-
-        <div class="service">
-          <h2 class="service__title">Fuel Delivery</h2>
-          <p class="service__para">Out of gas? We bring fuel to you.</p>
-        </div>
-
-        <div class="service">
-          <h2 class="service__title">Jump Start</h2>
-          <p class="service__para">Dead battery? We’ll get you moving again.</p>
-        </div>
-
-        <div class="service">
-          <h2 class="service__title">Lockout</h2>
-          <p class="service__para">Locked out? We help you get back in safely.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <div class="row about__row">
-        <div class="about__content">
-          <h2 class="about__title">Why Choose West Union AAA Trucking?</h2>
-  
-          <p class="about__para">
-            As a family-owned, two-truck operation, we offer something the big carriers can't:
-            personal attention to every single service. When you call, you talk directly to
-            the owners who care about your tow.
-          </p>
-  
-          <ul class="about__features">
-            <li><span class="check">✓</span>Direct communication with owner-operators, no call centers</li>
-            <li><span class="check">✓</span>Your tow is our priority — personalized service every time</li>
-            <li><span class="check">✓</span>Flexible scheduling and routes tailored to your needs</li>
-            <li><span class="check">✓</span>Competitive rates with transparent, honest pricing</li>
-          </ul>
-        </div>
-
-        <div class="about__img">
-          <img class="about__img--wrapper" src="./assets/towing in rain.jpg" alt="">
+        <div>
+          <p class="footer__para">© 2026 AAA Trucking. All rights reserved.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-
-
-  <!-- <section id="offers">
-    <div class="container">
-      <div class="row">
-        <h2>Our Offer</h2>
-
-        <p>
-
-        </p>
-
-      </div>
-
-    </div>
-  </section> -->
-
-  
-
-  <section id="gifts"> 
-    <dic class="container">
-      <div class="row">
-       
-        <h2 class="gist__title"> <i class="fa-solid fa-gift"></i>
-          Gift a Membership
-        </h2>
-        <p class="gift_membership">
-          Give someone peace of mind on the road. With a gifted membership, your friends or family can stay protected with reliable roadside assistance whenever they need it.
-        </p>
-
-        <button class="gift__btn">Send a Gift</button>
-
-      </div>
-    </dic>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="contact__header">
-        <h2 class="contactUs"> 
-          Contact Us
-        </h2>
-        <p class="contact__para">Talk directly with the owners. No automated systems, just real people who care.
-        </p></div>
-
-        <div class="contact__options">
-          <div class="call">
-            <div class="contact__item"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-12 h-12 mx-auto mb-4" data-fg-d3bl122="0.8:17.1221:/src/app/App.tsx:204:15:9660:44:e:Phone::::::DmpI" data-fgid-d3bl122=":r2v:"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-
-            <h3 class="contact__phone">Call Us</h3>
-          </div>
-            <p class="contact__phone-number">(971) 415-8264</p>
-          </div>
-
-          <div class="email"> 
-            <div class="contact__item">  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-12 h-12 mx-auto mb-4" data-fg-d3bl130="0.8:17.1221:/src/app/App.tsx:210:15:9973:43:e:Mail::::::D4VR" data-fgid-d3bl130=":r34:"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-            <h3 class="contact__email--title">Email US</h3>
-          </div>
-            <p class="contact__email">info@westunion.com</p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <footer> 
-    <div class="row footer__row">
-      <div class="footer__logo">
-        <img src="./assets/westunion logo.jpeg" alt="West Union AAA logo" class="footer__logo--img">
-        <div class="footer__logo--text">West Union AAA</div>
-      </div>
-      <div>
-        <p class="footer__para">© 2026 AAA Trucking. All rights reserved. </p>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
