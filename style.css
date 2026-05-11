@@ -394,7 +394,14 @@ About
 Pricing
 
 */
-.row.row__pricing {
+
+
+#Pricing {
+    background: white;
+    padding: 96px 32px;
+}
+
+.row__pricing {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -402,170 +409,190 @@ Pricing
 }
 
 .packages_contant {
-    margin-top: 18px;
-    gap: 32px;
-}
-
-.section__tage {
-    font-size: 18px;
-    color: rgb(70, 142, 193);
+    max-width: 700px;
+    margin-bottom: 32px;
 }
 
 .pricing__title {
-    font-size: 24px;
-    margin-bottom: 18px;
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 12px;
+    line-height: 1.2;
 }
 
 .pricing__para {
     font-size: 18px;
-    font-weight: 500;
-    color: #6c7a8f;
-    align-items: center;
-    text-align: center;
-    width: 600px;
-    margin-bottom: 32px;
+    color: var(--gray);
+    line-height: 1.7;
 }
 
+/* TOGGLE */
+
+.billing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 48px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.switch {
+    position: relative;
+    width: 62px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    background: #cbd5e1;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.switch input:checked+.slider {
+    background: var(--primary);
+}
+
+.switch input:checked+.slider::before {
+    transform: translateX(28px);
+}
+
+/* CARD */
 
 .packages__container {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: stretch;
-    margin-top: 32px;
-    gap: 32px;
-    width: 100%;
-    padding: 0 16px;
-    flex-wrap: nowrap;
 }
 
 .package {
-    flex: 1;
-    max-width: 360px;
-    border-radius: 8px;
+    width: 100%;
+    max-width: 460px;
+    background: white;
+    border-radius: 28px;
     overflow: hidden;
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    transition: all 0.35s ease;
+}
+
+.package:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
 }
 
 .package__stripe {
     height: 8px;
-    width: 100%;
-}
-
-.basic__stripe {
-    background: linear-gradient(115deg, rgb(70, 142, 193) 0%, rgb(129, 198, 230) 100%);
-}
-
-.premium__stripe {
-    background: linear-gradient(115deg, rgb(193, 80, 70) 0%, rgb(230, 161, 129) 100%);
+    background: linear-gradient(115deg,
+            var(--primary),
+            #81c6e6);
 }
 
 .package__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 32px 24px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    padding: 40px 32px;
+    border-bottom: 1px solid #e5e7eb;
 }
 
-.pakage__name {
-
-    font-size: 20px;
-    font-weight: 700;
-    color: #1a202c;
-    margin: 0;
-
+.package__name {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--dark);
 }
 
 .package__price {
-    font-size: 48px;
-    font-weight: 700;
-    color: #1a202c;
-    margin: 0;
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--primary-dark);
+    margin-top: 16px;
+    line-height: 1;
 }
 
 .package__duration {
+    margin-top: 10px;
+    color: var(--gray);
     font-size: 16px;
     font-weight: 700;
-    letter-spacing: 1px;
-    color: #a0aec0;
-    margin: 0;
-
 }
 
-.pricing__package--feature {
-    list-style: none;
+.package__offer {
+    margin-top: 14px;
+    color: #16a34a;
+    font-weight: 800;
+    font-size: 15px;
+}
 
+/* FEATURES */
+
+.pricing__package--feature {
+    padding: 36px 32px;
+    text-align: left;
 }
 
 .package__discription {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1a202c;
-    margin: 0 0 24px 0;
-    margin-top: 18px;
-}
-
-.package__feature-basic {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 34px;
-    color: #718096;
-    font-size: 18px;
-    margin-bottom: 18px;
+    color: var(--gray);
+    margin-bottom: 24px;
+    line-height: 1.7;
 }
 
 .package__feature {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    color: #718096;
-    font-size: 18px;
-    margin-bottom: 18px;
 }
+
+.package__feature li {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* BUTTON */
 
 .package__bottom {
-    padding: 24px;
-    border-top: 2px solid rgba(0, 0, 0, 0.08);
-    min-width: 180px;
-    padding: 14px 32px;
-    border-radius: 999px;
-    border: none;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.package__btn {
-    min-width: 180px;
-    padding: 14px 32px;
-    border-radius: 999px;
-    border: none;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-
-    color: white;
-    background: linear-gradient(115deg, rgb(193, 80, 70) 0%, rgb(230, 161, 129) 100%);
+    padding: 0 32px 40px;
 }
 
 .package__btn--basic {
-    min-width: 180px;
-    padding: 14px 32px;
-    border-radius: 999px;
+    width: 100%;
+    padding: 16px;
     border: none;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
+    border-radius: 999px;
+    background: linear-gradient(115deg,
+            var(--primary),
+            var(--primary-dark));
     color: white;
-    background: linear-gradient(115deg, rgb(70, 142, 193) 0%, rgb(129, 198, 230) 100%);
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.package__btn--basic:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.05);
 }
 
 /* 
@@ -699,10 +726,10 @@ Contact US
 FOOTER
 */
 
-.footer__row{
-   display: flex;
-   justify-content: space-between;
-   background-color: rgb(70, 142, 193);
+.footer__row {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(70, 142, 193);
 }
 
 .footer__logo {
@@ -727,7 +754,13 @@ FOOTER
 
 }
 
-.footer__para{
+.footer__para {
     color: white;
     margin-right: 12px;
+}
+
+[data-lucide] {
+    width: 24px;
+    height: 24px;
+    stroke: white;
 }
