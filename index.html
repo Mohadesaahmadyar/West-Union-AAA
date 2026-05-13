@@ -144,8 +144,9 @@
             </p>
 
             <div class="membership__buttons">
-              <button class="member__btn" id="joinBtn">Join Us</button>
-              <button class="member__btn member__btn--secondary">Log In</button>
+              <a href="signup.html" class="member__btn" id="joinBtn">Join Us</a>
+
+              <a href="login.html" class="member__btn member__btn--secondary">Log In</a>
             </div>
           </div>
         </div>
@@ -315,6 +316,25 @@
               <li>Vehicles must be newer than 1990</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZIP CHECKER SECTION -->
+    <section id="zip-checker">
+      <div class="container">
+        <div class="zip__box">
+          <h2 class="zip__title">Check Your Coverage Area</h2>
+          <p class="zip__para">
+            Enter your ZIP code to see if West Union AAA covers your area.
+          </p>
+    
+          <div class="zip__form">
+            <input type="text" id="zipInput" placeholder="Enter ZIP code">
+            <button id="zipBtn">Check ZIP</button>
+          </div>
+    
+          <p id="zipResult" class="zip__result"></p>
         </div>
       </div>
     </section>

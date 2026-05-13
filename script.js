@@ -45,6 +45,100 @@ if (currentMembers >= 381) {
     <span class="launch__highlight">$49.99</span>
   `;
 }
+const zipInput = document.getElementById("zipInput");
+const zipBtn = document.getElementById("zipBtn");
+const zipResult = document.getElementById("zipResult");
+
+const coveredZips = [
+
+  // West / Beaverton / Hillsboro
+  "97003",
+  "97005",
+  "97006",
+  "97007",
+  "97008",
+  "97024",
+  "97123",
+  "97124",
+  "97078",
+  "97077",
+  "97079",
+  "97075",
+  "97076",
+
+  // Portland Core
+  "97201",
+  "97202",
+  "97203",
+  "97204",
+  "97205",
+  "97206",
+  "97209",
+  "97210",
+  "97211",
+  "97212",
+  "97213",
+  "97214",
+  "97215",
+  "97216",
+  "97217",
+  "97218",
+  "97219",
+  "97220",
+  "97221",
+  "97222",
+  "97223",
+  "97224",
+  "97225",
+  "97227",
+  "97229",
+  "97230",
+  "97231",
+  "97232",
+  "97233",
+  "97236",
+  "97239",
+  "97266",
+  "97258",
+
+  // Gresham / East Side
+  "97030",
+  "97080",
+  "97035",
+  "97060",
+
+  // South / Oregon City / Clackamas / Milwaukie
+  "97015",
+  "97027",
+  "97034",
+  "97045",
+  "97068",
+  "97086",
+  "97089",
+  "97267"
+];
+
+zipBtn.addEventListener("click", function () {
+
+  const zip = zipInput.value.trim();
+
+  if (coveredZips.includes(zip)) {
+
+    zipResult.innerHTML =
+      "✅ Good news! We cover your area.";
+
+    zipResult.style.color = "#16a34a";
+
+  } else {
+
+    zipResult.innerHTML =
+      "❌ Sorry, we do not currently cover this ZIP code.";
+
+    zipResult.style.color = "#dc2626";
+  }
+
+});
+
 
 const joinTodayBtn = document.getElementById("joinTodayBtn");
 

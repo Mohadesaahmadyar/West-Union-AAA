@@ -426,6 +426,70 @@ nav {
     max-height: 200px;
 }
 
+/* 
+ZIP CHECKER SECTION
+
+*/
+
+#zip-checker {
+    padding: 80px 32px;
+    background: #f8fbff;
+}
+
+.zip__box {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.zip__title {
+    font-size: 34px;
+    color: #102a43;
+    margin-bottom: 12px;
+}
+
+.zip__para {
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+.zip__form {
+    display: flex;
+    gap: 12px;
+}
+
+.zip__form input {
+    flex: 1;
+    padding: 14px 16px;
+    border-radius: 999px;
+    border: 1px solid #dbeafe;
+    font-size: 16px;
+}
+
+.zip__form button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 999px;
+    background: rgb(70, 142, 193);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.zip__result {
+    margin-top: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .zip__form {
+        flex-direction: column;
+    }
+}
 
 
 /* 
