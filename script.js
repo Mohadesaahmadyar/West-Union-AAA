@@ -1,15 +1,9 @@
 const joinBtn = document.getElementById("joinBtn");
 
 joinBtn.addEventListener("click", function () {
-  alert("Thank you for your interest! Please call us to start your membership.");
+  window.location.href = "#Pricing";
 });
 
-const giftBtn = document.querySelector(".gift__btn");
-
-
-giftBtn.addEventListener("click", function () {
-  alert("Gift membership feature coming soon!");
-});
 function openMenu() {
   document.body.classList.add("menu--open");
 }
@@ -40,11 +34,26 @@ const countdownText = document.getElementById("countdownText");
 if (currentMembers >= 381) {
   const spotsLeft = maxOfferMembers - currentMembers;
 
-  countdownText.innerHTML =
-    `Only ${spotsLeft} launch offer spots remaining before pricing returns to normal.`;
+  countdownText.innerHTML = `
+    Only ${spotsLeft} launch offer spots remaining before pricing returns to normal.
+    Get your first year for only
+    <span class="launch__highlight">$49.99</span>
+  `;
 } else {
-  countdownText.innerHTML =
-  countdownText.innerHTML =
-  `First 499 members get their first year for only 
-   <span class="launch__highlight">$49.99</span>`;
+  countdownText.innerHTML = `
+    First 499 members get their first year for only
+    <span class="launch__highlight">$49.99</span>
+  `;
 }
+
+const joinTodayBtn = document.getElementById("joinTodayBtn");
+
+joinTodayBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  if (billingToggle.checked) {
+    window.location.href = "YOUR_YEARLY_PAYMENT_LINK";
+  } else {
+    window.location.href = "YOUR_MONTHLY_PAYMENT_LINK";
+  }
+});
