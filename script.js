@@ -125,14 +125,14 @@ zipBtn.addEventListener("click", function () {
   if (coveredZips.includes(zip)) {
 
     zipResult.innerHTML =
-      "✅ Good news! We cover your area.";
+      "Good news! We cover your area.";
 
     zipResult.style.color = "#16a34a";
 
   } else {
 
     zipResult.innerHTML =
-      "❌ Sorry, we do not currently cover this ZIP code.";
+      "Sorry, we do not currently cover this ZIP code.";
 
     zipResult.style.color = "#dc2626";
   }
