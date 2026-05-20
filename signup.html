@@ -8,18 +8,14 @@
   <title>West Union AAA | Sign Up</title>
 
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-
-  
+  <script src="script.js" defer></script>
 </head>
 
 <body class="signup__page">
 
   <div class="signup__container">
 
-    <p class="signup__tag">
-      WEST UNION AAA
-    </p>
+    <p class="signup__tag">WEST UNION AAA</p>
 
     <h1 class="signup__title">
       Claim Your Launch Offer
@@ -30,18 +26,13 @@
     </p>
 
     <div class="offer__box">
-
-      <p>
-        First 499 members get their first year for only
-      </p>
-
-      <div class="offer__highlight">
-        $49.99
-      </div>
-
+      <p>First 499 members get their first year for only</p>
+      <div class="offer__highlight">$49.99</div>
     </div>
 
     <form class="signup__form">
+
+      <h2 class="form__section-title">Personal Information</h2>
 
       <div class="form__group">
         <label for="first__name">First Name</label>
@@ -51,6 +42,11 @@
       <div class="form__group">
         <label for="last__name">Last Name</label>
         <input type="text" id="last__name" required>
+      </div>
+
+      <div class="form__group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required>
       </div>
 
       <div class="form__group">
@@ -68,20 +64,165 @@
         <input type="password" id="password" required>
       </div>
 
+      <h2 class="form__section-title">Address</h2>
+
+      <div class="form__group">
+        <label for="residenceAddress">Residence Address</label>
+        <input type="text" id="residenceAddress" required>
+      </div>
+
+      <div class="form__group">
+        <label for="signupZip">ZIP Code</label>
+        <input type="text" id="signupZip" required>
+      </div>
+
+      <p id="signupZipResult"></p>
+
+      <div class="form__group">
+        <label for="mailingAddress">Mailing Address</label>
+        <input type="text" id="mailingAddress" placeholder="Leave blank if same as residence address">
+      </div>
+
+      <h2 class="form__section-title">Vehicle Information</h2>
+
+      <div class="form__group">
+        <label for="vehicleYear">Vehicle Year</label>
+        <input type="number" id="vehicleYear" required>
+      </div>
+
+      <div class="form__group">
+        <label for="vehicleMake">Vehicle Make</label>
+        <input type="text" id="vehicleMake" placeholder="Toyota, Honda, Ford..." required>
+      </div>
+
+      <div class="form__group">
+        <label for="vehicleModel">Vehicle Model</label>
+        <input type="text" id="vehicleModel" required>
+      </div>
+
+      <div class="form__group">
+        <label for="vehicleVin">VIN</label>
+        <input type="text" id="vehicleVin" required>
+      </div>
+
+      <div class="form__group">
+        <label for="vehicleColor">Vehicle Color</label>
+        <input type="text" id="vehicleColor" required>
+      </div>
+
+      <h2 class="form__section-title">Second Vehicle</h2>
+
+      <div class="form__group">
+        <label for="secondVehicle">
+          Would you like to add a second vehicle for $49.99?
+        </label>
+
+        <p class="form__note">
+          You may only add your own vehicle or an immediate family member’s vehicle if they live in the same household.
+        </p>
+
+        <select id="secondVehicle" required>
+          <option value="">Choose one</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <div id="secondVehicleQuestions" class="hidden">
+
+        <div class="form__group">
+          <label for="secondVehicleYear">Second Vehicle Year</label>
+          <input type="number" id="secondVehicleYear">
+        </div>
+
+        <div class="form__group">
+          <label for="secondVehicleMake">Second Vehicle Make</label>
+          <input type="text" id="secondVehicleMake">
+        </div>
+
+        <div class="form__group">
+          <label for="secondVehicleModel">Second Vehicle Model</label>
+          <input type="text" id="secondVehicleModel">
+        </div>
+
+        <div class="form__group">
+          <label for="secondVehicleVin">Second Vehicle VIN</label>
+          <input type="text" id="secondVehicleVin">
+        </div>
+
+        <div class="form__group">
+          <label for="secondVehicleColor">Second Vehicle Color</label>
+          <input type="text" id="secondVehicleColor">
+        </div>
+
+        <div class="form__group">
+          <label for="isYourVehicle">Is this your vehicle?</label>
+          <select id="isYourVehicle">
+            <option value="">Choose one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+
+        <div id="familyVehicleQuestions" class="hidden">
+
+          <div class="form__group">
+            <label for="vehicleOwnerName">Whose vehicle is this?</label>
+            <input type="text" id="vehicleOwnerName" placeholder="Full name">
+          </div>
+
+          <div class="form__group">
+            <label for="vehicleOwnerDob">Vehicle Owner Date of Birth</label>
+            <input type="date" id="vehicleOwnerDob">
+          </div>
+
+          <div class="form__group">
+            <label for="relationship">Your Relationship to This Person</label>
+            <input type="text" id="relationship" placeholder="Spouse, parent, sibling, child...">
+          </div>
+
+          <div class="form__group">
+            <label for="sameHousehold">Do you live in the same household?</label>
+            <select id="sameHousehold">
+              <option value="">Choose one</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+
+      <h2 class="form__section-title">Required Attachments</h2>
+
+      <div class="form__group">
+        <label for="driverLicense">Upload Picture of Driver’s License</label>
+        <input type="file" id="driverLicense" accept="image/*" required>
+      </div>
+
+      <div class="form__group">
+        <label for="registration">Upload Picture of Vehicle Registration</label>
+        <input type="file" id="registration" accept="image/*" required>
+      </div>
+
       <button class="signup__btn" type="submit">
-        Create Membership
+        Submit Membership Application
       </button>
 
     </form>
 
     <div class="signup__links">
 
-      <a href="login.html" target="_blank">
+      <a href="login.html">
         Already have an account? Log in
       </a>
 
-      <a href="gift.html"  target="_blank">
+      <a href="gift.html">
         Want to gift a membership?
+      </a>
+
+      <a href="index.html">
+        ← Back to Home
       </a>
 
     </div>
