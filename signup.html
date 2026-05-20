@@ -7,7 +7,7 @@
 
   <title>West Union AAA | Sign Up</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="signup.css">
   <script src="script.js" defer></script>
 </head>
 
@@ -30,186 +30,283 @@
       <div class="offer__highlight">$49.99</div>
     </div>
 
-    <form class="signup__form">
+    <!-- =========================
+   FULL SIGNUP FORM
+========================= -->
 
+<form class="signup__form">
+
+    <!-- STEP 1 -->
+  
+    <div id="signupStep1">
+  
       <h2 class="form__section-title">Personal Information</h2>
-
+  
       <div class="form__group">
         <label for="first__name">First Name</label>
         <input type="text" id="first__name" required>
       </div>
-
+  
       <div class="form__group">
         <label for="last__name">Last Name</label>
         <input type="text" id="last__name" required>
       </div>
-
+  
       <div class="form__group">
         <label for="dob">Date of Birth</label>
         <input type="date" id="dob" required>
       </div>
-
+  
       <div class="form__group">
         <label for="email">Email</label>
         <input type="email" id="email" required>
       </div>
-
+      <div class="form__group">
+        <label for="username">Username</label>
+        <input type="text" id="username" required>
+      </div>
+  
       <div class="form__group">
         <label for="phone">Phone Number</label>
         <input type="tel" id="phone" required>
       </div>
-
+  
       <div class="form__group">
         <label for="password">Password</label>
         <input type="password" id="password" required>
       </div>
-
+  
       <h2 class="form__section-title">Address</h2>
-
+  
       <div class="form__group">
         <label for="residenceAddress">Residence Address</label>
         <input type="text" id="residenceAddress" required>
       </div>
-
+  
       <div class="form__group">
         <label for="signupZip">ZIP Code</label>
         <input type="text" id="signupZip" required>
       </div>
-
+  
       <p id="signupZipResult"></p>
-
+  
       <div class="form__group">
         <label for="mailingAddress">Mailing Address</label>
         <input type="text" id="mailingAddress" placeholder="Leave blank if same as residence address">
       </div>
-
+  
       <h2 class="form__section-title">Vehicle Information</h2>
-
+  
       <div class="form__group">
         <label for="vehicleYear">Vehicle Year</label>
         <input type="number" id="vehicleYear" required>
       </div>
-
+  
       <div class="form__group">
         <label for="vehicleMake">Vehicle Make</label>
-        <input type="text" id="vehicleMake" placeholder="Toyota, Honda, Ford..." required>
+        <input type="text" id="vehicleMake" required>
       </div>
-
+  
       <div class="form__group">
         <label for="vehicleModel">Vehicle Model</label>
         <input type="text" id="vehicleModel" required>
       </div>
-
+  
       <div class="form__group">
         <label for="vehicleVin">VIN</label>
         <input type="text" id="vehicleVin" required>
       </div>
-
+  
       <div class="form__group">
         <label for="vehicleColor">Vehicle Color</label>
         <input type="text" id="vehicleColor" required>
       </div>
-
+  
       <h2 class="form__section-title">Second Vehicle</h2>
-
+  
       <div class="form__group">
+  
         <label for="secondVehicle">
           Would you like to add a second vehicle for $49.99?
         </label>
-
+  
         <p class="form__note">
           You may only add your own vehicle or an immediate family member’s vehicle if they live in the same household.
         </p>
-
+  
         <select id="secondVehicle" required>
+  
           <option value="">Choose one</option>
+  
           <option value="yes">Yes</option>
+  
           <option value="no">No</option>
+  
         </select>
+  
       </div>
-
+  
+      <!-- SECOND VEHICLE QUESTIONS -->
+  
       <div id="secondVehicleQuestions" class="hidden">
-
+  
         <div class="form__group">
           <label for="secondVehicleYear">Second Vehicle Year</label>
           <input type="number" id="secondVehicleYear">
         </div>
-
+  
         <div class="form__group">
           <label for="secondVehicleMake">Second Vehicle Make</label>
           <input type="text" id="secondVehicleMake">
         </div>
-
+  
         <div class="form__group">
           <label for="secondVehicleModel">Second Vehicle Model</label>
           <input type="text" id="secondVehicleModel">
         </div>
-
+  
         <div class="form__group">
           <label for="secondVehicleVin">Second Vehicle VIN</label>
           <input type="text" id="secondVehicleVin">
         </div>
-
+  
         <div class="form__group">
           <label for="secondVehicleColor">Second Vehicle Color</label>
           <input type="text" id="secondVehicleColor">
         </div>
-
+  
         <div class="form__group">
-          <label for="isYourVehicle">Is this your vehicle?</label>
+  
+          <label for="isYourVehicle">
+            Is this your vehicle?
+          </label>
+  
           <select id="isYourVehicle">
+  
             <option value="">Choose one</option>
+  
             <option value="yes">Yes</option>
+  
             <option value="no">No</option>
+  
           </select>
+  
         </div>
-
+  
+        <!-- FAMILY QUESTIONS -->
+  
         <div id="familyVehicleQuestions" class="hidden">
-
+  
           <div class="form__group">
             <label for="vehicleOwnerName">Whose vehicle is this?</label>
-            <input type="text" id="vehicleOwnerName" placeholder="Full name">
+            <input type="text" id="vehicleOwnerName">
           </div>
-
+  
           <div class="form__group">
             <label for="vehicleOwnerDob">Vehicle Owner Date of Birth</label>
             <input type="date" id="vehicleOwnerDob">
           </div>
-
+  
           <div class="form__group">
-            <label for="relationship">Your Relationship to This Person</label>
-            <input type="text" id="relationship" placeholder="Spouse, parent, sibling, child...">
+            <label for="relationship">Relationship</label>
+            <input type="text" id="relationship">
           </div>
-
+  
           <div class="form__group">
-            <label for="sameHousehold">Do you live in the same household?</label>
+  
+            <label for="sameHousehold">
+              Do you live in the same household?
+            </label>
+  
             <select id="sameHousehold">
+  
               <option value="">Choose one</option>
+  
               <option value="yes">Yes</option>
+  
               <option value="no">No</option>
+  
             </select>
+  
           </div>
-
+  
         </div>
+  
       </div>
-
-      <h2 class="form__section-title">Required Attachments</h2>
-
+  
+      <!-- ATTACHMENTS -->
+  
+      <h2 class="form__section-title">
+        Required Attachments
+      </h2>
+  
       <div class="form__group">
-        <label for="driverLicense">Upload Picture of Driver’s License</label>
+  
+        <label for="driverLicense">
+          Upload Picture of Driver’s License
+        </label>
+  
         <input type="file" id="driverLicense" accept="image/*" required>
+  
       </div>
-
+  
       <div class="form__group">
-        <label for="registration">Upload Picture of Vehicle Registration</label>
+  
+        <label for="registration">
+          Upload Picture of Vehicle Registration
+        </label>
+  
         <input type="file" id="registration" accept="image/*" required>
+  
       </div>
-
-      <button class="signup__btn" type="submit">
-        Submit Membership Application
+  
+      <!-- CONTINUE -->
+  
+      <button class="signup__btn" id="continueBtn" type="button">
+        Continue
       </button>
-
-    </form>
+  
+    </div>
+  
+    <!-- STEP 2 -->
+  
+    <div id="signupStep2" class="hidden">
+  
+      <h2 class="form__section-title">
+        Membership Rules
+      </h2>
+  
+      <div class="offer__box">
+  
+        <p>Any dispatch counts as 1 service call.</p>
+  
+        <p>Benefits activate 24–48 hours after signup.</p>
+  
+        <p>Services are for unexpected breakdowns only.</p>
+  
+        <p>Mileage beyond included limits is billed separately.</p>
+  
+        <p>Coverage follows the member, not one vehicle.</p>
+  
+      </div>
+  
+      <label class="agree__box">
+  
+        <input type="checkbox" id="agreeRules">
+  
+        I have read and agree to the membership rules and terms.
+  
+      </label>
+  
+      <p id="rulesError" class="rules__error"></p>
+  
+      <button class="signup__btn" type="submit">
+        Continue to Payment
+      </button>
+  
+    </div>
+  
+  </form>
 
     <div class="signup__links">
 
