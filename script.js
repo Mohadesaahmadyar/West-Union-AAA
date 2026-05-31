@@ -262,3 +262,58 @@ if (continueBtn) {
   });
 
 }
+
+
+/* =========================
+   MEMBER SERVICE SLOTS
+========================= */
+
+const requestForm =
+  document.querySelector(".request__form");
+
+let usedSlots = 0;
+
+if (requestForm) {
+
+  requestForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    if (usedSlots >= 4) {
+
+      alert("You have already used all 4 service calls.");
+
+      return;
+    }
+
+    usedSlots++;
+
+    const currentSlot =
+      document.getElementById(`slot${usedSlots}`);
+
+    currentSlot.classList.add("slot--used");
+
+    const status =
+      currentSlot.querySelector(".slot__status");
+
+    status.textContent = "Status: Used";
+
+    const serviceType =
+      document.getElementById("serviceType").value;
+
+    const reason =
+      document.querySelector("textarea").value;
+
+    currentSlot.innerHTML += `
+      <p>Type: ${serviceType}</p>
+      <p>Reason: ${reason}</p>
+      <p>Date: ${new Date().toLocaleString()}</p>
+    `;
+
+    alert("Service request submitted successfully.");
+
+    requestForm.reset();
+
+  });
+
+}

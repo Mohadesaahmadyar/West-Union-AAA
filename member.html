@@ -1,127 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Member Page</title>
-    <link rel="stylesheet" href="member.css">
-    <script src="script.js"></script>
-</head>
-<!-- 
+    <link rel="stylesheet" href="member.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <!-- 
 member login
 request roadside help
 see membership status
 see used services: 1st tow, 2nd tow, etc.
 update phone/address/vehicle info -->
-<body>
+  <body>
     <section id="member-dashboard">
-        <div class="dashboard__container">
-      
-          <h1 class="dashboard__title">Member Dashboard</h1>
-          <p class="dashboard__subtitle">You have 4 roadside service calls per membership year.</p>
-      
+      <div class="dashboard__container">
+        <h1 class="dashboard__title">Member Dashboard</h1>
+        <p class="dashboard__subtitle">
+          You have 4 roadside service calls per membership year.
+        </p>
+
+
           <div class="service__slots">
-      
-            <div class="slot slot--used">
+
+            <div class="slot" id="slot1">
               <h3>Service Slot 1</h3>
-              <p>Status: Used</p>
-              <p>Type: Tow</p>
-              <p>Reason: Vehicle would not start</p>
-              <p>Date/Time: May 12, 2026 — 3:45 PM</p>
-              <p>Location: Beaverton, OR</p>
-              <p>Enroute Miles: 8</p>
-              <p>Loaded Miles: 12</p>
-              <p>Customer Paid: $0</p>
+              <p class="slot__status">Status: Available</p>
             </div>
-      
-            <div class="slot">
+          
+            <div class="slot" id="slot2">
               <h3>Service Slot 2</h3>
-              <p>Status: Available</p>
+              <p class="slot__status">Status: Available</p>
             </div>
-      
-            <div class="slot">
+          
+            <div class="slot" id="slot3">
               <h3>Service Slot 3</h3>
-              <p>Status: Available</p>
+              <p class="slot__status">Status: Available</p>
             </div>
-      
-            <div class="slot">
+          
+            <div class="slot" id="slot4">
               <h3>Service Slot 4</h3>
-              <p>Status: Available</p>
+              <p class="slot__status">Status: Available</p>
             </div>
-      
+          
           </div>
-      
-        </div>
-      </section>
-      <section id="request-service">
-        <div class="dashboard__container">
-      
-          <h2 class="dashboard__title">Request Roadside Service</h2>
-      
-          <p class="dashboard__subtitle">
-            Please answer as accurately as possible so we can dispatch the correct service vehicle.
-          </p>
-      
-          <form class="request__form">
-      
-            <label>
-              Service Type
-              <select id="serviceType">
-                <option value="">Choose service</option>
-                <option value="tow">Tow</option>
-                <option value="fuel">Fuel Delivery</option>
-                <option value="tire">Flat Tire</option>
-                <option value="jump">Jump Start</option>
-                <option value="lockout">Lockout</option>
-              </select>
-            </label>
-      
-            <label>
-              Are you with the vehicle?
-              <select>
-                <option>Yes</option>
-                <option>No</option>
-              </select>
-            </label>
-      
-            <label>
-              Is the key with the vehicle?
-              <select>
-                <option>Yes</option>
-                <option>No</option>
-              </select>
-            </label>
-      
-            <label>
-              Service address location type
-              <select>
-                <option>Residence</option>
-                <option>Parking Lot</option>
-                <option>Local Roadside</option>
-                <option>Highway</option>
-                <option>Garage Parking</option>
-              </select>
-            </label>
-      
-            <label>
-              Service Address
-              <input type="text" placeholder="Enter service address">
-            </label>
-      
-            <label>
-              Reason for service
-              <textarea placeholder="Tell us what happened"></textarea>
-            </label>
-      
-            <label>
-              Notes for provider
-              <textarea placeholder="Anything specific the service provider should know?"></textarea>
-            </label>
-      
-            <button class="request__btn" type="submit">Submit Service Request</button>
-      
-          </form>
-      
-        </div>
-      </section>
-</body>
+      </div>
+    </section>
+    <section id="request-service">
+      <div class="dashboard__container">
+        <h2 class="dashboard__title">Request Roadside Service</h2>
+
+        <p class="dashboard__subtitle">
+          Please answer as accurately as possible so we can dispatch the correct
+          service vehicle.
+        </p>
+
+        <form class="request__form">
+          <label>
+            Service Type
+            <select id="serviceType">
+              <option value="">Choose service</option>
+              <option value="tow">Tow</option>
+              <option value="fuel">Fuel Delivery</option>
+              <option value="tire">Flat Tire</option>
+              <option value="jump">Jump Start</option>
+              <option value="lockout">Lockout</option>
+            </select>
+          </label>
+
+          <label>
+            Are you with the vehicle?
+            <select>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </label>
+
+          <label>
+            Is the key with the vehicle?
+            <select>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </label>
+
+          <label>
+            Service address location type
+            <select>
+              <option>Residence</option>
+              <option>Parking Lot</option>
+              <option>Local Roadside</option>
+              <option>Highway</option>
+              <option>Garage Parking</option>
+            </select>
+          </label>
+
+          <label>
+            Service Address
+            <input type="text" placeholder="Enter service address" />
+          </label>
+
+          <label>
+            Reason for service
+            <textarea placeholder="Tell us what happened"></textarea>
+          </label>
+
+          <label>
+            Notes for provider
+            <textarea
+              placeholder="Anything specific the service provider should know?"
+            ></textarea>
+          </label>
+
+          <button class="request__btn" type="submit">
+            Submit Service Request
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
 </html>
+
