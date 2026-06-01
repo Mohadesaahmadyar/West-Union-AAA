@@ -7,6 +7,85 @@
     font-family: 'Inter', system-ui;
 }
 
+#map {
+    width: 100%;
+    height: 320px;
+    border-radius: 18px;
+    margin-top: 16px;
+    border: 1px solid #dbeafe;
+}
+
+.map__links {
+    display: flex;
+    gap: 14px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.map__links a {
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: #468ec1;
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.location__btn {
+    margin-top: 8px;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 999px;
+    background: #102a43;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.location__btn:hover {
+    transform: translateY(-3px);
+    background: rgb(70, 142, 193);
+}
+
+.location__result {
+    margin-top: 10px;
+    font-weight: 700;
+    color: #64748b;
+}
+.location__map-box {
+    margin-top: 18px;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #dbeafe;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.location__map-box iframe {
+    display: block;
+}
+
+.request__form label {
+    position: relative;
+    z-index: 2;
+}
+
+#serviceLocation {
+    position: relative;
+    z-index: 3;
+    pointer-events: auto;
+}
+
+.location__map-box {
+    position: relative;
+    z-index: 1;
+    margin-top: 18px;
+}
+
+.location__map-box iframe {
+    pointer-events: none;
+}
+
 body {
     background: #f8fbff;
 }
@@ -94,6 +173,8 @@ body {
     font-weight: 800;
     cursor: pointer;
 }
+
+
 
 @media (max-width: 900px) {
     .service__slots {
